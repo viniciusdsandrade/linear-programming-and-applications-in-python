@@ -1,0 +1,17 @@
+[project]
+name = "linear_programming_and_applications_in_python"
+version = "0.1.0"
+description = ""
+authors = [
+    { name = "Vinícius Andrade", email = "vinicius_andrade2010@hotmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.poetry]
+packages = [{ include = "linear_programming_and_applications_in_python" }]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
