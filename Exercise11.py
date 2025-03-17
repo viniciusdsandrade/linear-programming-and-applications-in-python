@@ -3,7 +3,10 @@ import numpy as np
 
 # /**
 #  * Problema: Maximização da função objetivo L = 3x1 + 5x2 sujeito às restrições:
-#  *          x1 <= 4, x2 <= 6, 3x1 + 2x2 <= 18, e x1, x2 >= 0.
+#  *          x1 <= 4,
+#  x2 <= 6,
+#  3x1 + 2x2 <= 18, e
+#  x1, x2 >= 0.
 #  * O código plota a região viável definida pelas restrições e destaca o ponto ótimo (2,6),
 #  * onde a função objetivo L atinge o valor máximo de 36.
 #  */
