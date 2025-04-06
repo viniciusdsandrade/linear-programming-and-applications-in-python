@@ -1,0 +1,56 @@
+------------------------------------------------------------
+EXERCÍCIO 10
+------------------------------------------------------------
+Uma fábrica de utensílios de cozinha fabrica panelas de pressão e
+frigideiras pelas quais obtém um lucro de R$3,00 e R$4,00 por unidade,
+respectivamente. Cada item precisa de uma hora para moldagem das peças,
+e, em função da manutenção da máquina de moldagem, só é possível trabalhar
+6 horas por dia. Uma pesquisa revelou que a demanda de mercado comporta
+4 unidades de cada item por dia.
+
+Formule o modelo de programação linear e resolva pelo método gráfico,
+indicando qual a melhor solução para maximizar o lucro.
+
+------------------------------------------------------------
+Demonstração Matemática da Solução:
+------------------------------------------------------------
+
+1) Variáveis de decisão:
+   ----------------------------------
+   x = número de panelas de pressão produzidas por dia
+   y = número de frigideiras produzidas por dia
+
+2) Função Objetivo:
+   ----------------------------------
+   Maximizar o lucro total:
+      Z = 3*x + 4*y
+
+3) Restrições:
+   ----------------------------------
+   a) Tempo de moldagem:
+         Cada item requer 1 hora, e há no máximo 6 horas por dia:
+         ==> x + y <= 6
+
+   b) Demanda de mercado:
+         Máximo de 4 unidades para cada item:
+         ==> x <= 4
+         ==> y <= 4
+
+   c) Não negatividade:
+         x >= 0, y >= 0
+
+4) Resolução pelo Método Gráfico:
+   ----------------------------------
+   Determinando os vértices da região factível:
+         • (0, 0)
+         • (4, 0)   [x = 4]
+         • (0, 4)   [y = 4]
+         • (4, 2)   [intersecção de x = 4 com x + y = 6]
+         • (2, 4)   [intersecção de y = 4 com x + y = 6]
+   Avaliando a função objetivo:
+         Z(4,0) = 3*4 + 4*0 = 12
+         Z(0,4) = 3*0 + 4*4 = 16
+         Z(4,2) = 3*4 + 4*2 = 12 + 8 = 20
+         Z(2,4) = 3*2 + 4*4 = 6 + 16 = 22
+   Assim, a solução ótima é produzir 2 panelas de pressão e 4 frigideiras,
+   com lucro máximo de 22 unidades monetárias.

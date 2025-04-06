@@ -1,0 +1,65 @@
+------------------------------------------------------------
+EXERCÍCIO 7
+------------------------------------------------------------
+A empresa Have Fun S/A produz uma bebida energética muito consumida
+pelos frequentadores de casas noturnas. Dois dos componentes utilizados
+na preparação da bebida são soluções compradas de laboratórios terceirizados –
+solução Red e solução Blue – que provêm os principais ingredientes ativos do
+energético: extrato de guaraná e cafeína.
+
+A companhia deseja determinar quantas doses de 10 mL de cada solução devem
+ser incluídas em cada lata da bebida para satisfazer as exigências mínimas:
+   - No mínimo, 48 gramas de extrato de guaraná;
+   - No mínimo, 12 gramas de cafeína; e
+   - No máximo, 20 gramas de cafeína (devido ao efeito acelerador do batimento cardíaco).
+
+Cada dose da solução Red contribui com:
+   - 8 gramas de extrato de guaraná
+   - 1 grama de cafeína
+   - Custo: R$0,06
+
+Cada dose da solução Blue contribui com:
+   - 6 gramas de extrato de guaraná
+   - 2 gramas de cafeína
+   - Custo: R$0,08
+
+O objetivo é minimizar o custo total de produção por lata.
+
+Formule o problema de forma a otimizar o custo total.
+
+------------------------------------------------------------
+Demonstração Matemática da Solução:
+------------------------------------------------------------
+
+1) Variáveis de decisão:
+   ----------------------------------
+   x = número de doses da solução Red por lata
+   y = número de doses da solução Blue por lata
+
+2) Função Objetivo:
+   ----------------------------------
+   Minimizar o custo total:
+      C = 0.06*x + 0.08*y
+
+3) Restrições:
+   ----------------------------------
+   a) Extrato de Guaraná:
+         Cada dose da solução Red contribui com 8 g, e cada dose da solução Blue, 6 g.
+         Exigência mínima: 48 g.
+         ==> 8*x + 6*y >= 48
+
+   b) Cafeína – Limite Mínimo:
+         Cada dose da solução Red contribui com 1 g, e cada dose da solução Blue, 2 g.
+         Exigência mínima: 12 g.
+         ==>  x + 2*y >= 12
+
+   c) Cafeína – Limite Máximo:
+         A quantidade de cafeína deve ser, no máximo, 20 g por lata.
+         ==>  x + 2*y <= 20
+
+4) Condição de Não Negatividade:
+   ----------------------------------
+         x >= 0
+         y >= 0
+
+------------------------------------------------------------

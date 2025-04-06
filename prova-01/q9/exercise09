@@ -1,0 +1,43 @@
+------------------------------------------------------------
+EXERCÍCIO 9
+------------------------------------------------------------
+Uma rede de televisão local tem o seguinte problema:
+foi descoberto que o programa "A", com 20 minutos de música e 1 minuto de propaganda,
+chama a atenção de 30.000 telespectadores, enquanto o programa "B", com 10 minutos de música
+e 1 minuto de propaganda, chama a atenção de 10.000 telespectadores.
+
+No decorrer de uma semana, o patrocinador insiste no uso de, no mínimo, 5 minutos para sua propaganda
+e que não há verba para mais de 80 minutos de música.
+
+Quantas vezes por semana cada programa deve ser levado a o ar para obter o número máximo de telespectadores?
+
+------------------------------------------------------------
+Demonstração Matemática da Solução:
+------------------------------------------------------------
+
+1) Variáveis de decisão:
+   ----------------------------------
+   x = número de vezes por semana que o programa A é exibido.
+   y = número de vezes por semana que o programa B é exibido.
+
+2) Função Objetivo:
+   ----------------------------------
+   Maximizar o número total de telespectadores:
+      Z = 30000*x + 10000*y
+
+3) Restrições:
+   ----------------------------------
+   a) Propaganda:
+         Cada exibição de qualquer programa tem 1 minuto de propaganda.
+         O patrocinador exige, no mínimo, 5 minutos totais de propaganda por semana.
+         ==> x + y >= 5
+
+   b) Música:
+         O programa A tem 20 minutos de música e o programa B tem 10 minutos de música.
+         Não há verba para mais de 80 minutos de música por semana.
+         ==> 20*x + 10*y <= 80
+         Simplificando: 2*x + y <= 8
+
+4) Condição de Não Negatividade:
+   ----------------------------------
+         x >= 0, y >= 0

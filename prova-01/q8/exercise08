@@ -1,0 +1,45 @@
+------------------------------------------------------------
+EXERCÍCIO 8
+------------------------------------------------------------
+Um sapateiro faz 6 sapatos por hora, se fizer somente sapatos, e 5 cintos por hora,
+se fizer somente cintos. Ele gasta 2 unidades de couro para fabricar 1 sapato e
+1 unidade de couro para fabricar 1 cinto. Sabendo-se que o total disponível de couro
+é de 6 unidades e que o lucro unitário por sapato é de 5 unidades monetárias e o
+do cinto é de 2 unidades monetárias, pede-se: o modelo do sistema de produção do
+sapateiro, se o objetivo é maximizar seu lucro por hora.
+
+Formule o modelo de programação linear.
+------------------------------------------------------------
+Demonstração Matemática da Solução:
+------------------------------------------------------------
+
+1) Variáveis de decisão:
+   ----------------------------------
+   x = número de sapatos produzidos por hora
+   y = número de cintos produzidos por hora
+
+2) Função Objetivo:
+   ----------------------------------
+   Maximizar o lucro por hora:
+      Z = 5*x + 2*y
+
+3) Restrições:
+   ----------------------------------
+   a) Restrição de couro:
+         Cada sapato consome 2 unidades de couro e cada cinto, 1 unidade.
+         Total disponível: 6 unidades de couro.
+         ==> 2*x + y <= 6
+
+   b) Restrição de capacidade de produção:
+         - Se produzir somente sapatos, o máximo é 6 por hora: x <= 6.
+         - Se produzir somente cintos, o máximo é 5 por hora: y <= 5.
+
+4) Condição de Não Negatividade:
+   ----------------------------------
+         x >= 0, y >= 0
+
+Observação:
+   Este modelo determina o número ótimo de sapatos (x) e cintos (y) a produzir por hora
+   para maximizar o lucro, sujeito às restrições de disponibilidade de couro e à capacidade
+   máxima de produção.
+------------------------------------------------------------

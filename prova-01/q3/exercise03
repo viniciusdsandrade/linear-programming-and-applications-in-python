@@ -1,0 +1,50 @@
+------------------------------------------------------------
+EXERCÍCIO 3
+------------------------------------------------------------
+Considere a situação de decidir sobre o número de unidades a serem produzidas
+por um certo fabricante de dois diferentes tipos de produtos.
+Os lucros por unidade do produto1 e do produto2 são, respectivamente, R$2,00 e R$5,00.
+Cada unidade do produto1 requer 3 horas de máquina e 9 unidades de matéria-prima,
+enquanto o produto2 requer 4 horas de máquina e 7 unidades de matéria-prima.
+Os tempos máximos disponíveis de horas de máquina são 200 horas e o máximo de matéria-prima
+disponíveis são 300 unidades.
+
+Formule o problema de forma a otimizar o lucro total.
+
+------------------------------------------------------------
+Demonstração Matemática da Solução:
+------------------------------------------------------------
+
+1) Variáveis de decisão:
+   ----------------------------------
+   x = número de unidades do produto1 a produzir
+   y = número de unidades do produto2 a produzir
+
+2) Função Objetivo:
+   ----------------------------------
+   Maximizar o lucro total:
+      Z = 2*x + 5*y
+
+3) Restrições:
+   ----------------------------------
+   a) Horas de máquina:
+         Cada unidade do produto1 requer 3 horas;
+         Cada unidade do produto2 requer 4 horas.
+         Total disponível: 200 horas.
+         ==> 3*x + 4*y <= 200
+
+   b) Matéria-prima:
+         Cada unidade do produto1 requer 9 unidades;
+         Cada unidade do produto2 requer 7 unidades.
+         Total disponível: 300 unidades.
+         ==> 9*x + 7*y <= 300
+
+4) Condição de Não Negatividade:
+   ----------------------------------
+         x >= 0
+         y >= 0
+
+Observação:
+   Embora, na prática, x e y possam precisar ser números inteiros,
+   neste exercício as variáveis são tratadas como contínuas para a modelagem.
+

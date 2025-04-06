@@ -1,0 +1,64 @@
+------------------------------------------------------------
+EXERCÍCIO 1
+------------------------------------------------------------
+Um alfaiate tem disponíveis os seguintes tecidos:
+  - 16 metros de algodão,
+  - 11 metros de seda, e
+  - 15 metros de lã.
+
+Para um terno são necessários:
+  - 2 metros de algodão,
+  - 1 metro de seda, e
+  - 1 metro de lã.
+
+Para um vestido, são necessários:
+  - 1 metro de algodão,
+  - 2 metros de seda, e
+  - 3 metros de lã.
+
+Se um terno é vendido por R$300,00 e um vestido por R$500,00,
+quantas peças de cada tipo o alfaiate deve fazer, de modo a maximizar o seu lucro?
+
+Elabore o modelo.
+
+------------------------------------------------------------
+Demonstração Matemática da Solução:
+------------------------------------------------------------
+
+1) Variáveis de decisão:
+   ----------------------------------
+   x = número de ternos a produzir
+   y = número de vestidos a produzir
+
+2) Função Objetivo:
+   ----------------------------------
+   Maximizar o lucro total:
+      Z = 300*x + 500*y
+
+3) Restrições (disponibilidade dos tecidos):
+   ----------------------------------
+   a) Algodão:
+         Cada terno usa 2 m e cada vestido usa 1 m.
+         Disponibilidade: 16 m.
+         ==> 2*x + y <= 16
+
+   b) Seda:
+         Cada terno usa 1 m e cada vestido usa 2 m.
+         Disponibilidade: 11 m.
+         ==> x + 2*y <= 11
+
+   c) Lã:
+         Cada terno usa 1 m e cada vestido usa 3 m.
+         Disponibilidade: 15 m.
+         ==> x + 3*y <= 15
+
+4) Condição de Não Negatividade:
+   ----------------------------------
+         x >= 0
+         y >= 0
+
+Observação:
+   Apesar de na prática x e y serem números inteiros (pois não se pode produzir frações de peças),
+   neste exercício utilizamos variáveis contínuas.
+
+

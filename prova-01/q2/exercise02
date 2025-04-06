@@ -1,0 +1,77 @@
+------------------------------------------------------------
+EXERCÍCIO 2
+------------------------------------------------------------
+Um jovem atleta sente-se atraído pela prática de dois esportes: natação e ciclismo.
+Sabe-se por experiência que:
+  - A natação exige um gasto em mensalidade do clube e deslocamento até a piscina,
+    que pode ser expresso em um custo médio de R$3,00 por sessão de treinamento de duas horas.
+  - O ciclismo, mais simples, acaba custando cerca de R$2,00 pelo mesmo tempo de prática.
+O rapaz, enquanto aluno de graduação, dispõe de R$70,00 para seu treinamento.
+Seus afazeres na universidade lhe permitem empregar, no máximo, 18 horas mensais e 80.000 calorias
+para os esforços físicos.
+Cada sessão de natação consome 1.500 calorias, enquanto cada etapa ciclística dispende 1.000 calorias.
+Considerando que o rapaz goste igualmente de ambos os esportes, o problema consiste em planejar
+seu treinamento de forma a maximizar o número de sessões de treinamento.
+
+Elabore o modelo.
+
+------------------------------------------------------------
+Demonstração Matemática da Solução:
+------------------------------------------------------------
+
+1) Variáveis de decisão:
+   ----------------------------------
+   x = número de sessões de natação
+   y = número de sessões de ciclismo
+
+2) Função Objetivo:
+   ----------------------------------
+   Maximizar o número total de sessões de treinamento:
+      Z = x + y
+
+3) Restrições:
+   ----------------------------------
+   a) Restrição de custo:
+         Custo da natação: R$3,00 por sessão
+         Custo do ciclismo: R$2,00 por sessão
+         Total disponível: R$70,00
+         ==> 3*x + 2*y <= 70
+
+   b) Restrição de tempo:
+         Cada sessão tem duração de 2 horas.
+         Máximo de horas mensais: 18 horas
+         ==> 2*(x + y) <= 18   ou   x + y <= 9
+
+   c) Restrição calórica:
+         Calorias na natação: 1.500 por sessão
+         Calorias no ciclismo: 1.000 por sessão
+         Total disponível: 80.000 calorias
+         ==> 1500*x + 1000*y <= 80000
+         (Podemos dividir por 500 para simplificar:
+             3*x + 2*y <= 160)
+
+4) Condição de Não Negatividade:
+   ----------------------------------
+         x >= 0
+         y >= 0
+
+Observação:
+   Apesar de, na prática, x e y serem números inteiros (pois não se pode treinar frações de
+   sessões), neste exercício utilizamos variáveis contínuas.
+
+------------------------------------------------------------
+Solução:
+------------------------------------------------------------
+Como o objetivo é maximizar x + y e a restrição de tempo impõe:
+         x + y <= 9,
+a solução ótima é:
+         x + y = 9
+
+Todas as combinações (x, y) que satisfaçam x + y = 9, além das demais restrições,
+são ótimas. Exemplos:
+   - 9 sessões de natação (x = 9, y = 0): Custo = R$27,00; Calorias = 13.500.
+   - 9 sessões de ciclismo (x = 0, y = 9): Custo = R$18,00; Calorias = 9.000.
+   - 4 sessões de natação e 5 de ciclismo (x = 4, y = 5): Custo = R$(12 + 10) = R$22,00;
+     Calorias = 6.000 + 5.000 = 11.000.
+
+Portanto, o número máximo de sessões de treinamento é 9.

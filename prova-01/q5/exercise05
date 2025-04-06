@@ -1,0 +1,46 @@
+------------------------------------------------------------
+EXERCÍCIO 5
+------------------------------------------------------------
+A Esportes Radicais S/A produz paraquedas e asa-deltas em duas linhas de montagem.
+A primeira linha de montagem tem 100 horas semanais disponíveis para a fabricação dos produtos,
+e a segunda linha tem um limite de 42 horas semanais.
+Cada um dos produtos requer 10 horas de processamento na linha 1,
+enquanto na linha 2 o paraquedas requer 3 horas e a asa-delta requer 7 horas.
+Sabendo que o mercado está disposto a comprar toda a produção da empresa
+e que o lucro pela venda de cada paraquedas é de R$60,00 e para cada asa-delta vendida é de R$40,00,
+encontre a programação de produção que maximize o lucro da Esportes Radicais S/A.
+
+Formule o problema de forma a otimizar o lucro total.
+
+------------------------------------------------------------
+Demonstração Matemática da Solução:
+------------------------------------------------------------
+
+1) Variáveis de decisão:
+   ----------------------------------
+   x = número de paraquedas a produzir
+   y = número de asa-deltas a produzir
+
+2) Função Objetivo:
+   ----------------------------------
+   Maximizar o lucro total:
+      Z = 60*x + 40*y
+
+3) Restrições:
+   ----------------------------------
+   a) Linha de montagem 1:
+         Cada produto requer 10 horas.
+         Total disponível: 100 horas.
+         ==> 10*x + 10*y <= 100
+
+   b) Linha de montagem 2:
+         Paraquedas requer 3 horas; Asa-delta requer 7 horas.
+         Total disponível: 42 horas.
+         ==> 3*x + 7*y <= 42
+
+4) Condição de Não Negatividade:
+   ----------------------------------
+         x >= 0
+         y >= 0
+
+------------------------------------------------------------

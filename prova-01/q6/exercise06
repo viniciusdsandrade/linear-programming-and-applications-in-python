@@ -1,0 +1,70 @@
+------------------------------------------------------------
+EXERCÍCIO 6
+------------------------------------------------------------
+A indústria Alumilâminas S/A iniciou suas operações em janeiro de 2021 e vem
+conquistando espaço no mercado brasileiro de laminados. A empresa tem contratos
+fechados de fornecimento para os três tipos de lâminas de alumínio que fabrica:
+lâminas finas, médias e grossas. Toda a produção é realizada em duas fábricas:
+uma em São Paulo e outra no Rio de Janeiro.
+
+Segundo os contratos, a empresa precisa entregar:
+   - 16 toneladas de lâminas finas,
+   - 6 toneladas de lâminas médias, e
+   - 28 toneladas de lâminas grossas.
+
+Além disso, devido à qualidade dos produtos, há uma demanda extra para cada tipo
+de lâminas.
+
+A fábrica de São Paulo possui:
+   - Custo diário: R$100.000,00.
+   - Capacidade diária: 8 toneladas de lâminas finas, 1 tonelada de lâminas médias e 2 toneladas de lâminas grossas.
+
+A fábrica do Rio de Janeiro possui:
+   - Custo diário: R$200.000,00.
+   - Capacidade diária: 2 toneladas de lâminas finas, 1 tonelada de lâminas médias e 7 toneladas de lâminas grossas.
+
+O problema consiste em determinar quantos dias cada fábrica deve operar para atender
+aos pedidos (mínimos dos contratos) ao menor custo possível.
+
+Formule o problema de forma a otimizar o custo total.
+
+------------------------------------------------------------
+Demonstração Matemática da Solução:
+------------------------------------------------------------
+
+1) Variáveis de decisão:
+   ----------------------------------
+   x = número de dias de operação da fábrica de São Paulo
+   y = número de dias de operação da fábrica do Rio de Janeiro
+
+2) Função Objetivo:
+   ----------------------------------
+   Minimizar o custo total:
+      C = 100000*x + 200000*y
+
+3) Restrições (para atender aos pedidos mínimos):
+   ----------------------------------
+   a) Lâminas finas:
+         A produção diária: 8 toneladas (SP) e 2 toneladas (RJ)
+         Demanda mínima: 16 toneladas
+         ==> 8*x + 2*y >= 16
+
+   b) Lâminas médias:
+         A produção diária: 1 tonelada (SP) e 1 tonelada (RJ)
+         Demanda mínima: 6 toneladas
+         ==> x + y >= 6
+
+   c) Lâminas grossas:
+         A produção diária: 2 toneladas (SP) e 7 toneladas (RJ)
+         Demanda mínima: 28 toneladas
+         ==> 2*x + 7*y >= 28
+
+4) Condição de Não Negatividade:
+   ----------------------------------
+         x >= 0
+         y >= 0
+
+Observação:
+   Embora, na prática, os valores de x e y devam ser inteiros (dias completos de operação),
+   neste modelo as variáveis são tratadas como contínuas.
+------------------------------------------------------------

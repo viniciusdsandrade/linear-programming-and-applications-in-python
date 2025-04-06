@@ -1,0 +1,54 @@
+------------------------------------------------------------
+EXERCÍCIO 4
+------------------------------------------------------------
+Uma companhia produz dois tipos de camisas: manga longa e manga curta.
+Na Cia, o único ponto crítico é a mão-de-obra disponível. A camisa de manga longa
+consome 50% a mais de mão-de-obra do que a de manga curta.
+Sabe-se também que se toda a produção fosse concentrada na disponibilização de
+camisas de manga curta, a Cia poderia entregar 400 camisas de manga curta por dia.
+O mercado limita a produção diária das camisas em 150 mangas longas e 300 mangas curtas.
+O lucro bruto por camisa de manga longa é de R$5,00 e por camisa de manga curta, R$3,50.
+
+Formule o problema de modo a permitir a determinação das quantidades de camisas
+a produzir, de modo a otimizar o lucro.
+
+------------------------------------------------------------
+Demonstração Matemática da Solução:
+------------------------------------------------------------
+
+1) Variáveis de decisão:
+   ----------------------------------
+   x = número de camisas de manga longa a produzir
+   y = número de camisas de manga curta a produzir
+
+2) Função Objetivo:
+   ----------------------------------
+   Maximizar o lucro total:
+      Z = 5*x + 3.5*y
+
+3) Restrições:
+   ----------------------------------
+   a) Restrição de mão-de-obra:
+         - Suponha que uma camisa de manga curta consuma uma quantidade de mão-de-obra L.
+         - Então, uma camisa de manga longa consome 1.5L (ou seja, 50% a mais).
+         - Se a Cia, concentrando-se apenas em camisas de manga curta, poderia produzir 400 unidades,
+           o total de mão-de-obra disponível equivale a 400L.
+         - Assim, o consumo total de mão-de-obra para produzir x camisas de manga longa e y de manga curta é:
+               1.5*x + y
+         - Logo, a restrição é:
+               1.5*x + y <= 400
+
+   b) Restrição de mercado para camisas de manga longa:
+         x <= 150
+
+   c) Restrição de mercado para camisas de manga curta:
+         y <= 300
+
+4) Condição de Não Negatividade:
+   ----------------------------------
+         x >= 0
+         y >= 0
+
+Observação:
+   Este modelo permite determinar as quantidades ótimas de camisas de manga longa e manga curta
+   a produzir para maximizar o lucro total.
