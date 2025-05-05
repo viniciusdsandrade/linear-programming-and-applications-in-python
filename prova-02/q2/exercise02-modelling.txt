@@ -1,0 +1,31 @@
+Exemplo 02 – Modelagem de Programação Linear (PL) para maximizar a receita diária das equipes de instalação
+
+Variáveis de decisão
+    x₁ = número de equipes Tipo I (2 E + 6 T) a empregar
+    x₂ = número de equipes Tipo II (4 E + 8 T) a empregar
+    x₃ = número de equipes Tipo III (3 E + 9 T) a empregar
+
+Função-objetivo (maximizar a receita total)
+    Max Z = 2 000 · x₁ + 3 000 · x₂ + 2 800 · x₃ [reais]
+
+Restrições de mão-de-obra
+    Engenheiros 2 · x₁ + 4 · x₂ + 3 · x₃ ≤ 25 (unidades de E)
+    Técnicos 6 · x₁ + 8 · x₂ + 9 · x₃ ≤ 40 (unidades de T)
+
+Não-negatividade
+    x₁ ≥ 0 , x₂ ≥ 0 , x₃ ≥ 0
+
+Solução ótima contínua (inteira em equipes)
+    x₁* = 0 equipes Tipo I
+    x₂* = 5 equipes Tipo II
+    x₃* = 0 equipes Tipo III
+    Receita máxima Z* = R$ 15 000,00 por dia
+
+Verificações de uso dos recursos
+        • Engenheiros: 2·0 + 4·5 + 3·0 = 20 ≤ 25 (sobra de 5 engenheiros)
+        • Técnicos: 6·0 + 8·5 + 9·0 = 40 = limite (recurso totalmente usado)
+
+Observações
+    – O número de técnicos é o gargalo do problema, pois esgota-se na solução ótima enquanto ainda restam engenheiros disponíveis.
+    – A equipe Tipo II apresenta a maior receita por técnico (R$ 375/-T) e o segundo melhor retorno por engenheiro (R$ 750/-E); por isso, preenche integralmente o limite de técnicos antes de qualquer outra combinação.
+    – Caso a empresa contrate técnicos adicionais, seria possível formar mais equipes Tipo II (ou I/III) e aumentar a receita; já a contratação de engenheiros sozinha não altera o ótimo enquanto os técnicos continuarem limitados.

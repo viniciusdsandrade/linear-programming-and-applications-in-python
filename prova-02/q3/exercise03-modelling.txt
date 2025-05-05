@@ -1,0 +1,29 @@
+Exemplo 03 – Modelagem de Programação Linear (PL) para maximizar o lucro horário do sapateiro
+
+Variáveis de decisão
+    x_S = quantidade de sapatos produzidos por hora
+    x_C = quantidade de cintos produzidos por hora
+
+Função-objetivo (maximizar o lucro por hora)
+    Max Z = 5 · x_S + 2 · x_C [reais]
+
+Restrições de produção
+    Tempo de trabalho (1/6) · x_S + (1/5) · x_C ≤ 1 (hora disponível) ⇔ 5 · x_S + 6 · x_C ≤ 30
+    Consumo de couro 2 · x_S + 1 · x_C ≤ 6 (unidades de couro)
+
+Não-negatividade
+    x_S ≥ 0 , x_C ≥ 0
+
+Solução ótima contínua (inteira em unidades)
+    x_S* = 3 sapatos
+    x_C* = 0 cintos
+    Lucro máximo Z* = R$ 15,00 por hora
+
+Verificações de uso dos recursos
+    • Couro: 2 · 3 + 1 · 0 = 6 (unidade totalmente usada)
+    • Tempo: (1/6) · 3 + (1/5) · 0 = 0,5 h ≤ 1 h (folga de 0,5 h)
+
+Observações
+    – O couro é o gargalo da produção; ele se esgota completamente enquanto sobra tempo de trabalho.
+    – A relação lucro/consumo de couro é maior para sapatos (R$ 2,50 por unidade de couro) do que para cintos (R$ 2,00), por isso a produção ótima inclui apenas sapatos.
+    – Se o sapateiro obtiver mais couro ou reduzir o couro necessário por sapato, o lucro horário poderá aumentar; se houver limite mínimo de cintos, bastaria acrescentar a restrição correspondente e resolver novamente o modelo.

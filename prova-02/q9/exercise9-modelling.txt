@@ -1,0 +1,25 @@
+Exemplo 09 – Modelagem de Programação Linear (PL) para minimizar o custo de transporte de 600 funcionários
+
+Variáveis de decisão
+  x_G = quantidade de ônibus grandes (60 lugares) a utilizar
+  x_P = quantidade de ônibus pequenos (40 lugares) a utilizar
+
+Função-objetivo (minimizar o custo total da viagem)
+  Min C = 190·x_G + 140·x_P          [reais]
+
+Restrições
+  60·x_G + 40·x_P ≥ 600     (capacidade mínima de assentos)
+  x_G + x_P ≤ 13            (limite de motoristas disponíveis)
+  x_G ≤ 8                   (máximo de ônibus grandes disponíveis)
+  x_P ≤ 12                  (máximo de ônibus pequenos disponíveis)
+  x_G, x_P ≥ 0 e inteiros   (não-negatividade e integralidade)
+
+Solução ótima
+  x_G* = 8 ônibus grandes
+  x_P* = 3 ônibus pequenos
+  Custo mínimo = R$ 1 940,00
+
+Verificações
+  • Capacidade total: 60·8 + 40·3 = 600 assentos (atende exatamente à demanda)
+  • Motoristas necessários: 8 + 3 = 11 ≤ 13 (restrição satisfeita)
+  • Frota utilizada dentro dos limites (8 ≤ 8, 3 ≤ 12)

@@ -1,0 +1,26 @@
+Exemplo 10 – Modelagem de Programação Linear para minimizar o custo de produção de papel
+
+Variáveis de decisão
+  x1 = número de dias de operação da Fábrica 1
+  x2 = número de dias de operação da Fábrica 2
+
+Função-objetivo (minimizar o custo total)
+  Min C = 1 000·x1 + 2 000·x2          [reais]
+
+Restrições de atendimento à demanda
+  8·x1 + 2·x2 ≥ 16     (papel fino, t)
+  1·x1 + 1·x2 ≥ 6      (papel médio, t)
+  2·x1 + 7·x2 ≥ 28     (papel grosso, t)
+
+Restrições de não-negatividade
+  x1 ≥ 0,  x2 ≥ 0
+
+Solução contínua ótima
+  x1* = 2,8 dias
+  x2* = 3,2 dias
+  Custo mínimo = R$ 9 200,00
+
+Melhor solução inteira (dias inteiros)
+  x1  = 2 dias
+  x2  = 4 dias   (empate com x1 = 4 e x2 = 3)
+  Custo = R$ 10 000,00

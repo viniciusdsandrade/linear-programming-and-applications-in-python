@@ -1,0 +1,27 @@
+Exemplo 08 – Modelagem de Programação Linear (PL) para maximizar a receita diária
+
+Variáveis de decisão
+  x1 = quantidade produzida do produto P1 (unidades por dia)
+  x2 = quantidade produzida do produto P2 (unidades por dia)
+
+Função-objetivo (maximizar a receita total)
+  Max R = 1 900·x1 + 2 100·x2          [reais]
+
+Restrições de capacidade
+  4·x1 + 2·x2 ≤ 20        (horas de forja disponíveis)
+  2·x1 + 3·x2 ≤ 10        (horas de polimento disponíveis)
+  100·x1 + 200·x2 ≤ 500   (unidades de matéria-prima disponíveis)
+
+Restrições de não-negatividade
+  x1 ≥ 0,  x2 ≥ 0
+
+Solução ótima
+  x1* = 5 unidades de P1
+  x2* = 0 unidades de P2
+  Receita (lucro) máxima = R$ 9 500,00
+
+Verificações
+  • Consumo de forja: 4·5 + 2·0 = 20 h (usa integralmente o recurso)
+  • Consumo de polimento: 2·5 + 3·0 = 10 h (usa integralmente o recurso)
+  • Consumo de matéria-prima: 100·5 + 200·0 = 500 u. (usa integralmente o recurso)
+  • Todos os limites são respeitados e a produção tem mercado garantido.

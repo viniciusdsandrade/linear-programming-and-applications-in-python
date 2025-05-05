@@ -1,0 +1,36 @@
+Exemplo 06 – Modelagem de Programação Linear (PL) para maximizar a margem semanal da refinaria
+
+Variáveis de decisão
+    x_V = litros de gasolina Verde produzidos por semana
+    x_A = litros de gasolina Azul produzidos por semana
+    x_C = litros de gasolina Comum produzidos por semana
+
+Função-objetivo (maximizar a margem total)
+    Max Z = 0,30 · x_V + 0,25 · x_A + 0,20 · x_C [R$/semana]
+
+Restrições de recursos
+    0,22 · x_V + 0,52 · x_A + 0,74 · x_C ≤ 9 600 000 (gasolina pura)
+    0,50 · x_V + 0,34 · x_A + 0,20 · x_C ≤ 4 800 000 (octana)
+    0,28 · x_V + 0,14 · x_A + 0,06 · x_C ≤ 2 200 000 (aditivo)
+
+Restrições de mercado
+    x_C ≥ 16 · x_V (mínimo de comum)
+    x_A ≤ 600 000 (máximo de azul)
+
+Não-negatividade
+    x_V ≥ 0 , x_A ≥ 0 , x_C ≥ 0
+
+Solução ótima contínua (em litros)
+    x_V* ≈ 770 067
+    x_A* = 600 000
+    x_C* = 16 · x_V* ≈ 12 321 072
+    Margem máxima Z* ≈ R$ 2 845 235 por semana
+
+Verificações de uso dos recursos
+    • Gasolina pura: 0,22·770 067 + 0,52·600 000 + 0,74·12 321 072 ≈ 9 600 000 L (recurso totalmente usado)
+    • Octana: 0,50·770 067 + 0,34·600 000 + 0,20·12 321 072 ≈ 3 053 000 L ≤ 4 800 000 L
+    • Aditivo: 0,28·770 067 + 0,14·600 000 + 0,06·12 321 072 ≈ 1 039 000 L ≤ 2 200 000 L
+
+Observações
+    – A gasolina pura é o gargalo do processo; esgota-se completamente na solução ótima, enquanto octana e aditivo permanecem com folga.
+    – O limite de 600 000 L para a gasolina azul está ativo; se fosse ampliado, parte da produção de comum migraria para azul, aumentando a margem (0,25 R$/L > 0,20 R$/L).

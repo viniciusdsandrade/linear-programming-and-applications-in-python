@@ -1,0 +1,42 @@
+Exemplo 07 – Modelagem de Programação Linear (PL) para maximizar o lucro diário na produção de facas
+
+Variáveis de decisão
+  x_P = quantidade de facas Padrão produzidas por dia
+  x_M = quantidade de facas Média produzidas por dia
+  x_G = quantidade de facas Grande produzidas por dia
+
+Função-objetivo (maximizar a contribuição total de lucro)
+  Max Z = 3·x_P + 4·x_M + 4,7·x_G         [reais]
+
+Restrições de capacidade das máquinas
+  Corte:       10·x_P + 10·x_M + 12·x_G ≤ 14 400   (4 h × 3 600 s)
+  Modelagem:   10·x_P + 15,5·x_M + 17·x_G ≤ 21 600 (6 h)
+  Afiação:     12·x_P + 16·x_M + 19·x_G ≤ 21 600 (6 h)
+  Cabo:        19·x_P + 21·x_M + 24·x_G ≤ 28 800 (8 h)
+  Montagem:    19·x_P + 21·x_M + 22·x_G ≤ 28 800 (8 h)
+
+Restrição de matéria-prima (área das lâminas)
+  25·x_P + 32·x_M + 45·x_G ≤ 50 000
+  (2,0 m × 1,0 m = 20 000 cm² por chapa; 2,5 chapas ⇒ 50 000 cm²)
+
+Restrições de não-negatividade
+  x_P ≥ 0,   x_M ≥ 0,   x_G ≥ 0
+
+
+Solução ótima contínua (dias inteiros já atendidos)
+  x_P* = 0
+  x_M* = 1 350
+  x_G* = 0
+  Lucro máximo Z* = R$ 5 400,00/dia
+
+Verificações de uso de recursos na solução ótima
+  • Corte:       10·0 + 10·1 350 + 12·0 = 13 500 s ≤ 14 400 s
+  • Modelagem:   10·0 + 15,5·1 350 + 17·0 = 20 925 s ≤ 21 600 s
+  • Afiação:     12·0 + 16·1 350 + 19·0 = 21 600 s (recurso totalmente utilizado)
+  • Cabo:        19·0 + 21·1 350 + 24·0 = 28 350 s ≤ 28 800 s
+  • Montagem:    19·0 + 21·1 350 + 22·0 = 28 350 s ≤ 28 800 s
+  • Matéria-prima: 32·1 350 = 43 200 cm² ≤ 50 000 cm²
+
+Observações
+  – Como todas as restrições são satisfeitas e não há limite de demanda, a produção exclusiva do modelo Médio maximiza o lucro diário.
+  – Se desejar uma solução inteira com limites adicionais (por exemplo, lote mínimo), basta acrescentar essas condições ao modelo.

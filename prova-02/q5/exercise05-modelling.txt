@@ -1,0 +1,30 @@
+Exemplo 05 – Modelagem de Programação Linear (PL) para maximizar o lucro na produção de três combustíveis
+
+Variáveis de decisão
+  x_A = litros do Combustível A a fabricar
+  x_B = litros do Combustível B a fabricar
+  x_C = litros do Combustível C a fabricar
+
+Função-objetivo  (maximizar o lucro total)
+  Max Z = 20·x_A + 22·x_B + 18·x_C           [reais]
+
+Restrições de capacidade dos insumos
+  8·x_A + 5·x_B + 4·x_C ≤ 120                (litros de extrato mineral disponíveis)
+  5·x_A + 4·x_B + 2·x_C ≤ 200                (litros de solvente disponíveis)
+
+Restrições de não-negatividade
+  x_A ≥ 0 ,  x_B ≥ 0 ,  x_C ≥ 0
+
+Solução ótima contínua (e inteira em litros)
+  x_A* = 0 L
+  x_B* = 0 L
+  x_C* = 30 L
+  Lucro máximo Z* = R$ 540,00
+
+Verificações de uso dos insumos na solução ótima
+  • Extrato mineral: 8·0 + 5·0 + 4·30 = 120 L  (recurso totalmente utilizado)
+  • Solvente:        5·0 + 4·0 + 2·30 = 60 L  (folga de 140 L)
+
+Observações
+  – O extrato mineral é o gargalo da produção; ele se esgota exatamente no ponto ótimo.
+  – Como o solvente sobra, qualquer aumento de lucro exige mais extrato mineral ou uma receita que use menos desse insumo.

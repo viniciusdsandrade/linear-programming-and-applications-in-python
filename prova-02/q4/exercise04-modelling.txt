@@ -1,0 +1,30 @@
+Exemplo 04 – Modelagem de Programação Linear (PL) para maximizar o lucro diário da metalúrgica
+
+Variáveis de decisão
+  x_A = número de componentes A a produzir
+  x_B = número de componentes B a produzir
+  x_C = número de componentes C a produzir
+
+Função-objetivo (maximizar o lucro total)
+  Max Z = 25·x_A + 15·x_B + 11·x_C        [reais]
+
+Restrições de insumos
+  40·x_A + 25·x_B + 18·x_C ≤ 712          (unidades do Recurso I)
+  30·x_A + 15·x_B + 10·x_C ≤ 450          (unidades do Recurso II)
+
+Não-negatividade
+  x_A ≥ 0, x_B ≥ 0, x_C ≥ 0
+
+Solução ótima contínua (também inteira em unidades)
+  x_A* = 7 unidades do componente A
+  x_B* = 0 unidades do componente B
+  x_C* = 24 unidades do componente C
+  Lucro máximo Z* = R$ 439,00 por dia
+
+Verificações de uso dos recursos
+  • Recurso I 40·7 + 25·0 + 18·24 = 712 (unidade totalmente usada)
+  • Recurso II 30·7 + 15·0 + 10·24 = 450 (unidade totalmente usada)
+
+Observações
+  – O Recurso I e o Recurso II esgotam-se simultaneamente, tornando-se o gargalo da produção; qualquer incremento de lucro exigiria mais desses insumos ou uma receita que os utilize menos por unidade.
+  – A escolha “tudo em A e C” é típica de problemas *product-mix*: o produto B, embora rentável, não cabe no polígono de restrições com lucro superior ao obtido na solução ótima.
