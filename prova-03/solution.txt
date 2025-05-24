@@ -1,0 +1,66 @@
+Resolução Analítica via Matrizes e Determinantes (Cramer)
+
+Problema:
+Maximizar L = x1 + 2·x2
+Sujeito a:
+  7·x1 + 9·x2 ≤ 63
+  11·x1 + 5·x2 ≤ 55
+  0 ≤ x1 ≤ 4
+  x2 ≥ 0
+
+1. Sistema das duas restrições ativas como igualdades
+   7·x1 + 9·x2 = 63
+   11·x1 + 5·x2 = 55
+
+   Matriz A de coeficientes e vetor b de limites:
+     A = [ [7, 9],
+           [11, 5] ]
+     b = [ 63, 55 ]
+
+2. Cálculo de determinantes (Regra de Cramer)
+   Determinante principal:
+     D = |7  9|
+         |11 5|  = 7·5 – 11·9 = 35 – 99 = –64
+
+   Determinante para x1 (D1):
+     Troca-se a 1ª coluna de A por b:
+     D1 = |63 9|
+          |55 5| = 63·5 – 55·9 = 315 – 495 = –180
+     x1 = D1 / D = (–180)/(–64) = 2,8125
+
+   Determinante para x2 (D2):
+     Troca-se a 2ª coluna de A por b:
+     D2 = |7  63|
+          |11 55| = 7·55 – 11·63 = 385 – 693 = –308
+     x2 = D2 / D = (–308)/(–64) = 4,8125
+
+   Ponto de interseção das duas retas ativas:
+     (x1, x2) = (2,8125 , 4,8125)
+
+3. Outros vértices da região factível
+   a) Origem: (0, 0)
+   b) Interseção de x1 = 0 na 1ª restrição:
+        7·0 + 9·x2 = 63  →  x2 = 7     →  (0, 7)
+   c) Interseção de x1 = 4 na 2ª restrição:
+        11·4 + 5·x2 = 55  →  5·x2 = 11  →  x2 = 2,2   →  (4, 2,2)
+
+   Vértices factíveis:
+     (0, 0), (0, 7), (4, 2,2), (2,8125, 4,8125)
+
+4. Avaliação da função objetivo em cada vértice
+   L = x1 + 2·x2
+
+     Vértice     x1       x2       L
+     (0,0)       0        0        0
+     (0,7)       0        7        14
+     (4,2,2)     4        2,2      8,4
+     (2,8125,4,8125) 2,8125 4,8125 12,4375
+
+5. Conclusão
+   O valor máximo de L ocorre em (x1, x2) = (0, 7), ou seja:
+     • Produzir 0 × 10^6 unidades de Refribom
+     • Produzir 7 × 10^6 unidades de Refrisaúde
+     • Lucro máximo Lₘₐₓ = 14 × 10^6
+
+Comentário final:
+A aplicação da regra de Cramer e a análise dos vértices mostram que o ponto ótimo é a combinação em que não se produz Refribom (x1 = 0) e se produz 7 milhões de unidades de Refrisaúde (x2 = 7), atingindo o lucro diário de 14 milhões.
