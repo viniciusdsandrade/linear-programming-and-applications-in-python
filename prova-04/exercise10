@@ -1,0 +1,27 @@
+Produzir 0 panelas e 0 frigideiras → Lucro = R$0
+Produzir 0 panelas e 1 frigideiras → Lucro = R$4
+Produzir 0 panelas e 2 frigideiras → Lucro = R$8
+Produzir 0 panelas e 3 frigideiras → Lucro = R$12
+Produzir 0 panelas e 4 frigideiras → Lucro = R$16
+Produzir 1 panelas e 0 frigideiras → Lucro = R$3
+Produzir 1 panelas e 1 frigideiras → Lucro = R$7
+Produzir 1 panelas e 2 frigideiras → Lucro = R$11
+Produzir 1 panelas e 3 frigideiras → Lucro = R$15
+Produzir 1 panelas e 4 frigideiras → Lucro = R$19
+Produzir 2 panelas e 0 frigideiras → Lucro = R$6
+Produzir 2 panelas e 1 frigideiras → Lucro = R$10
+Produzir 2 panelas e 2 frigideiras → Lucro = R$14
+Produzir 2 panelas e 3 frigideiras → Lucro = R$18
+Produzir 2 panelas e 4 frigideiras → Lucro = R$22
+Produzir 3 panelas e 0 frigideiras → Lucro = R$9
+Produzir 3 panelas e 1 frigideiras → Lucro = R$13
+Produzir 3 panelas e 2 frigideiras → Lucro = R$17
+Produzir 3 panelas e 3 frigideiras → Lucro = R$21
+Produzir 4 panelas e 0 frigideiras → Lucro = R$12
+Produzir 4 panelas e 1 frigideiras → Lucro = R$16
+Produzir 4 panelas e 2 frigideiras → Lucro = R$20
+
+=== Solução Ótima ===
+Painelas de pressão: 2
+Frigideiras:       4
+Lucro máximo:      R$22
