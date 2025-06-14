@@ -1,0 +1,46 @@
+flowchart LR
+  %% Início e Fim
+  subgraph Inicio["Início"]
+    direction TB
+    inicio(("0 dias")):::startend
+  end
+  subgraph Fim["Fim"]
+    direction TB
+    fim(("16 dias")):::startend
+  end
+
+  %% Definição de estilos
+  classDef critica  fill:#fde2e2,stroke:#e57070,stroke-width:1.5px,rx:6,ry:6,font-family:Arial,font-size:12px;
+  classDef normal   fill:#f7f7f7,stroke:#bbb,       stroke-width:0.8px,rx:4,ry:4,font-family:Arial,font-size:11px;
+  classDef startend fill:#fff8dc,stroke:#ccc,      stroke-width:1px,rx:10,ry:10,font-family:Arial,font-size:12px,bold;
+
+  %% Nós (com classes)
+  K([K<br/>1 dia<br/>TF=0│FL=0]):::critica
+  L([L<br/>3 dias<br/>TF=0│FL=0]):::critica
+  N([N<br/>2 dias<br/>TF=2│FL=2]):::normal
+  M([M<br/>2 dias<br/>TF=0│FL=0]):::critica
+  O([O<br/>2 dias<br/>TF=4│FL=0]):::normal
+  P([P<br/>6 dias<br/>TF=0│FL=0]):::critica
+  Q([Q<br/>5 dias<br/>TF=4│FL=4]):::normal
+  R([R<br/>4 dias<br/>TF=0│FL=0]):::critica
+
+  %% Conexões com linhas suaves
+  linkStyle default stroke:#999,stroke-width:1px,stroke-dasharray:2 2;
+
+  inicio --> K
+  inicio --> N
+
+  K --> L
+  K --> M
+  L --> M
+  N --> M
+
+  K --> O
+
+  M --> P
+  O --> Q
+
+  P --> R
+  Q --> R
+
+  R --> fim

@@ -1,0 +1,39 @@
+---
+config:
+  theme: mc
+---
+flowchart LR
+  subgraph Inicio["Início"]
+    direction TB
+    inicio(("0 sem")):::startend
+  end
+  subgraph Fim["Fim"]
+    direction TB
+    fim(("64 sem")):::startend
+  end
+  classDef critica fill:#fde2e2,stroke:#e57070,stroke-width:1.5px,rx:6,ry:6,font-family:Arial,font-size:12px;
+  classDef normal  fill:#f7f7f7,stroke:#bbb,       stroke-width:0.8px,rx:4,ry:4,font-family:Arial,font-size:11px;
+  classDef startend fill:#fff8dc,stroke:#ccc,      stroke-width:1px,rx:10,ry:10,font-family:Arial,font-size:12px,bold;
+  LO([LO<br/>5 sem<br/>FT=0/FL=0]):::critica
+  OA([OA<br/>21 sem<br/>FT=0/FL=0]):::critica
+  ME([ME<br/>1 sem<br/>FT=44/FL=44]):::normal
+  RTF([RTF<br/>6 sem<br/>FT=39/FL=39]):::normal
+  PAI([PAI<br/>24 sem<br/>FT=0/FL=0]):::critica
+  PAM([PAM<br/>10 sem<br/>FT=23/FL=23]):::normal
+  II([II<br/>9 sem<br/>FT=0/FL=0]):::critica
+  IM([IM<br/>3 sem<br/>FT=0/FL=0]):::critica
+  M([M<br/>2 sem<br/>FT=0/FL=0]):::critica
+  linkStyle default stroke:#999,stroke-width:1px,stroke-dasharray:2 2;
+  inicio --> LO
+  LO --> OA
+  LO --> ME
+  LO --> RTF
+  OA --> PAI
+  OA --> PAM
+  ME --> II
+  RTF --> II
+  PAI --> II
+  PAM --> IM
+  II --> IM
+  IM --> M
+  M --> fim

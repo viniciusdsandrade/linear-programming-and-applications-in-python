@@ -1,0 +1,50 @@
+flowchart LR
+  %% Início e Fim
+  subgraph Inicio["Início"]
+    direction TB
+    inicio(("0 sem")):::startend
+  end
+  subgraph Fim["Fim"]
+    direction TB
+    fim(("22 sem")):::startend
+  end
+
+  %% Definição de estilos
+  classDef critica  fill:#fde2e2,stroke:#e57070,stroke-width:1.5px,rx:6,ry:6,font-family:Arial,font-size:12px;
+  classDef normal   fill:#f7f7f7,stroke:#bbb,       stroke-width:0.8px,rx:4,ry:4,font-family:Arial,font-size:11px;
+  classDef startend fill:#fff8dc,stroke:#ccc,      stroke-width:1px,rx:10,ry:10,font-family:Arial,font-size:12px,bold;
+
+  %% Nós (com classes)
+  C([C<br/>7 sem<br/>FT=0│FL=0]):::critica
+  D([D<br/>6 sem<br/>FT=5│FL=5]):::normal
+  A([A<br/>2 sem<br/>FT=5│FL=5]):::normal
+  B([B<br/>4 sem<br/>FT=0│FL=0]):::critica
+  E([E<br/>5 sem<br/>FT=1│FL=0]):::normal
+  I([I<br/>9 sem<br/>FT=1│FL=0]):::normal
+  F([F<br/>6 sem<br/>FT=0│FL=0]):::critica
+  G([G<br/>4 sem<br/>FT=1│FL=0]):::normal
+  H([H<br/>5 sem<br/>FT=0│FL=0]):::critica
+
+  %% Conexões com linhas suaves
+  linkStyle default stroke:#999,stroke-width:1px,stroke-dasharray:2 2;
+
+  inicio --> C
+  inicio --> D
+
+  C --> E
+  C --> I
+  C --> B
+
+  D --> A
+  D --> F
+
+  A --> G
+  E --> G
+
+  B --> F
+
+  G --> H
+  F --> H
+  I --> H
+
+  H --> fim
